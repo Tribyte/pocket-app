@@ -1,0 +1,85 @@
+@import "../variables.scss";
+
+#landing-login-body {
+    position: relative;
+    z-index: 10;
+    min-height: calc(100vh - #{$nav-height});
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        font-family: $font;
+        border-radius: 27px;
+        padding: 30px;
+        background-color: #fff;
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                margin: 0 0 20px 0;
+            }
+        }
+
+        .social {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            a {
+                flex: 0 50%;
+                display: flex;
+                justify-content: center;
+                border-radius: 5px;
+                padding: 8px 0;
+                color: #fff;
+            }
+
+            .google {
+                background-color: #dd4b39;
+            }
+
+            .twitter {
+                background-color: #55ACEE;
+            }
+
+            .reddit {
+                background-color: #FF4300;
+            }
+
+            .github {
+                background-color: #24292e;
+            }
+        }
+
+        .form-body {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin: 10px 0 5px 0;
+            }
+
+            input {
+                outline: none;
+                width: 100%;
+                border-radius: 7px;
+                height: 3em;
+                border: 1px solid #ccc;
+                background: #eee;
+            }
+
+            #login {
+                background-color: #333;
+                color: #fff;
+                border: 0;
+                border-radius: 7px;
+                height: 4em;
+                margin: 20px 0 0 0;
+            }
+        }
+    }
+}

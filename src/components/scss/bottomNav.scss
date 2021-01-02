@@ -1,0 +1,38 @@
+@import "../variables.scss";
+
+.bottom-nav {
+    position: fixed;
+    bottom: $nav-middle-padding;
+    right: $nav-middle-padding;
+
+    button {
+        margin-top: $nav-small-padding;
+        border-radius: 100%;
+        background-color: $nav-dark-color;
+        padding: 10px;
+        border: 0;
+        outline: none;
+        position: relative;
+        z-index: 10;
+        transition: 1s;
+
+        svg {
+            height: 35px;
+            width: 35px;
+        }
+    }
+
+    .menu {
+        z-index: 11;
+    }
+
+    .nav-flex {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &.active {
+        .one { transform: translate(0, 62px); }
+        .two { transform: translate(0, 126px); }
+    }
+}

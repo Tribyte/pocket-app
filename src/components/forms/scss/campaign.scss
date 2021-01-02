@@ -1,0 +1,46 @@
+@import "../../variables.scss";
+
+.campaign-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+
+    .img {
+        width: 96%;
+        padding-top: 96%;
+        background-color: #475E74;
+        margin-top: $nav-small-padding;
+        border-radius: $nav-border-radius;
+    }
+
+    input {
+        width: 96%;
+        margin: $nav-middle-padding;
+        font-family: $font;
+        font-size: $font-size;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 1px solid $nav-dark-color;
+    }
+
+    label {
+        align-self: start;
+        padding-left: 2%;
+        font-family: $font;
+
+    }
+
+    textarea {
+        width: 96%;
+        margin: $nav-small-padding;
+        font-family: $font;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 1px solid $nav-dark-color;
+        height: 1.5em;
+        font-size: $font-small-size;
+    }
+}

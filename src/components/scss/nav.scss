@@ -1,0 +1,78 @@
+@import "../variables.scss";
+
+.nav {
+    width: $nav-width;
+    height: $nav-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    background-color: $nav-dark-color;
+    // padding: $nav-middle-padding;
+    overflow-x: hidden;
+
+    .back {
+        border: 0;
+        background: transparent;
+        float: left;
+    }
+
+    form {
+        display: contents;
+        width: 100%;
+    }
+
+    input[type=text] {
+        float: right;
+        color: $nav-light-color;
+        box-sizing: border-box;
+        border: 2px solid $nav-light-color;
+        border-right: 0;
+        border-radius: $nav-border-radius;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 130px;
+        font-size: $font-size;
+        background-color: transparent;
+        padding: $nav-small-padding;
+        -webkit-transition: $nav-transition;
+        transition: width $nav-transition;
+        outline: none;
+        margin-right: 0;
+    }
+
+    input[type=text]:focus {
+        width: 98%;
+    }
+
+    .logo {
+        //color
+        fill: $nav-light-color;
+    }
+    
+    svg {
+        //positioning
+        position: relative;
+        margin-top: $nav-middle-padding;
+        //measurements
+        width: $nav-svg-width;
+        padding: $nav-small-padding;
+        //cursor
+        cursor: pointer;
+        //z-index
+        z-index: $nav-front-z-index;
+    }
+
+    h1 {
+        color: #fff;
+        font-family: $font;
+        font-weight: $font-weight;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@keyframes delay-overflow {
+  from { overflow-x: hidden; }
+  100% { overflow-x: hidden; }
+}

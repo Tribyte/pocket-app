@@ -1,0 +1,12 @@
+@import "../variables.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-fix {
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100vh;
+}

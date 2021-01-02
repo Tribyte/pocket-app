@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+$font: 'Quicksand', sans-serif;
+$font-weight: 100;
+$font-size: 1.5em;
+$font-small-size: 1em;
+$font-smaller-size: 0.5em;
+
+$box-shadow: 2px 2px 3px 3px #eee;
+
+//<!-- colors -->
+$white: #fff;
+$black-pearl: #040d16;
+
+//<!-- background -->
+//z-index
+$background-z-index: 0;
+
+// <!-- nav -->
+//color
+$nav-light-color: $white;
+$nav-dark-color: $black-pearl;
+//measurements
+$nav-height: 60px;
+$nav-width: 100%;
+$nav-expanded-width: 26em;
+$nav-expanded-icon-options: 18%;
+$nav-svg-width: 2.5em;
+$nav-small-padding: 5px;
+$nav-middle-padding: 10px;
+$nav-large-padding: 20px;
+$nav-border: 2px solid $nav-light-color;
+$nav-dashed-border: 2px dashed $nav-light-color;
+$nav-border-radius: 10px;
+    //campaign
+$nav-campaign-img-height: 6em;
+$nav-campaign-svg-width: 2em;
+$nav-campaign-search-svg-width: 3em;
+//timing
+$nav-transition-time: .75s;
+$nav-transition-timing-function: ease-in-out;
+$nav-transition: $nav-transition-timing-function $nav-transition-time;
+//z-index
+$nav-back-z-index: 5;
+$nav-middle-z-index: 7;
+$nav-front-z-index: 10;

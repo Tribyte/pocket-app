@@ -1,0 +1,26 @@
+@import "../../variables.scss";
+
+.campaignCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font;
+    font-size: $font-smaller-size;
+    font-weight: $font-weight;
+    width: 46%;
+    padding-top: 30%;
+    margin: 2%;
+    border-radius: $nav-border-radius;
+    background-color: #475E74;
+    box-shadow: $box-shadow;
+
+    h1 {
+        margin: 0;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        background-color: rgba(0,0,0,.6);
+        border-bottom-left-radius: $nav-border-radius;
+        border-bottom-right-radius: $nav-border-radius;
+    }
+}

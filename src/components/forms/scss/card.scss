@@ -1,0 +1,308 @@
+@import "../../variables.scss";
+
+.card-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    
+    .top {
+        background-color: $nav-light-color;
+        box-shadow: $box-shadow;
+        padding-bottom: $nav-small-padding;
+        margin-top: $nav-small-padding;
+        width: 96%;
+        border-radius: $nav-border-radius;
+
+        .img {
+            float: left;
+            width: 31%;
+            padding-top: 31%;
+            background-color: #475E74;
+            margin-top: $nav-small-padding;
+            border-radius: $nav-border-radius;
+            margin-left: 2%;
+        }
+
+        input {
+            float: left;
+            width: 64%;
+            font-family: $font;
+            font-size: $font-size;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 1px solid $nav-dark-color;
+            padding: 0;
+            margin-top: $nav-middle-padding;
+            margin-bottom: $nav-middle-padding;
+            margin-right: 0;
+            margin-left: 2%;
+        }
+    
+        label {
+            align-self: start;
+            padding-left: 2%;
+            font-family: $font;
+        }
+
+        textarea {
+            width: 64%;
+            font-family: $font;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 1px solid $nav-dark-color;
+            height: 1.5em;
+            font-size: $font-small-size;
+            margin-left: 2%;
+        }
+    }
+
+    .notes {
+        width: 96%;
+
+        .add-note {
+            font-family: $font;
+            font-size: $font-size;
+            margin-top: $nav-middle-padding;
+            border: none;
+            border-radius: $nav-border-radius;
+            background-color: transparent;
+            background-color: $nav-light-color;
+            box-shadow: $box-shadow;
+        }
+
+        .note {
+            font-family: $font;
+            font-size: $font-size;
+            margin-top: $nav-small-padding;
+            box-shadow: $box-shadow;
+            width: 100%;
+            border-radius: $nav-border-radius;
+
+            textarea {
+                width: 96%;
+                font-family: $font;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                border-bottom: 1px solid $nav-dark-color;
+                height: 1.5em;
+                font-size: $font-small-size;
+                margin: $nav-small-padding;
+
+            }
+
+            p {
+                float: right;
+                padding-top: $nav-small-padding;
+                padding-right: $nav-small-padding;
+                margin: 0;
+            }
+        }
+
+        .switch {
+            float: right;
+            margin-right: $nav-small-padding;
+            margin-top: $nav-small-padding;
+            position: relative;
+            width: 60px;
+            height: 34px;
+
+            input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+
+                &:checked + .slider {
+                    background-color: #2196F3;
+                }
+
+                &:focus + .slider {
+                    box-shadow: 0 0 1px #2196F3;
+                }
+
+                &:checked + .slider:before {
+                    -webkit-transform: translateX(26px);
+                    -ms-transform: translateX(26px);
+                    transform: translateX(26px);
+                }
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ddd;
+                -webkit-transition: .4s;
+                transition: .4s;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    height: 26px;
+                    width: 26px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: $nav-light-color;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                }
+
+                &.round {
+                    border-radius: 34px;
+
+                    &:before {
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    .tags {
+        background-color: $nav-light-color;
+        box-shadow: $box-shadow;
+        padding: $nav-small-padding;
+        margin-top: $nav-small-padding;
+        width: 96%;
+        border-radius: $nav-border-radius;
+        margin-bottom: $nav-large-padding;
+
+        .add-tag {
+            font-family: $font;
+            font-size: $font-size;
+            border: none;
+            border-radius: $nav-border-radius;
+            background-color: transparent;
+            background-color: $nav-light-color;
+            box-shadow: $box-shadow;
+            margin-bottom: $nav-middle-padding;
+        }
+
+        .tag {
+            width: 100%;
+            display: flex;
+            margin-top: $nav-small-padding;
+
+            &:first-child {
+                margin-top: $nav-large-padding;
+            }
+
+            &:last-child {
+                margin-bottom: $nav-middle-padding;
+            }
+
+            input {
+                width: 100%;
+                font-family: $font;
+                font-size: $font-size;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                border-bottom: 1px solid $nav-dark-color;
+            }
+        }
+
+        .checkbox {
+            --background: #fff;
+            --border: #D1D6EE;
+            --border-hover: #BBC1E1;
+            --border-active: #00aa00;
+            --tick: #fff;
+            position: relative;
+            display: flex;
+
+            input, svg {
+                width: 32px;
+                height: 32px;
+                display: block;
+            }
+
+            input {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                position: relative;
+                outline: none;
+                background: var(--background);
+                border: none;
+                margin: 0;
+                padding: 0;
+                cursor: pointer;
+                border-radius: 4px;
+                transition: box-shadow .3s;
+                box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+                &:hover {
+                    --s: 2px;
+                    --b: var(--border-hover);
+                }
+                &.checked {
+                    --b: var(--border-active);
+                }
+            }
+
+            svg {
+                pointer-events: none;
+                fill: none;
+                stroke-width: 2px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke: var(--stroke, var(--border-active));
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 32px;
+                height: 32px;
+                transform: scale(var(--scale, 1)) translateZ(0);
+            }
+
+            &.path {
+                input {
+                    &.checked {
+                        --s: 4px;
+                        transition-delay: .4s;
+                        & + svg {
+                            --a: 16.1 86.12;
+                            --o: 102.22;
+                        }
+                    }
+                }
+                svg {
+                    stroke-dasharray: var(--a, 86.12);
+                    stroke-dashoffset: var(--o, 86.12);
+                    transition: stroke-dasharray .6s, stroke-dashoffset .6s;
+                }
+            }
+
+            &.bounce {
+                --stroke: var(--tick);
+                input {
+                    &.checked {
+                        --s: 22px;
+                        & + svg {
+                            animation: bounce .4s linear forwards .2s;
+                        }
+                    }
+                }
+                svg {
+                    --scale: 0;
+                }
+            }
+        }
+    }
+}
+@keyframes bounce {
+    50% {
+        transform: scale(1.2);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
